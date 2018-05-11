@@ -1,38 +1,22 @@
 ---
-title: Hello World
+title: Hexo + github pages 博客多台机器同步问题
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+### 在博客仓库中新建一个新分支hexo-source 用来存放hexo数据，theme通过submodule管理
 
-## Quick Start
+    $ cd ryanxci.github.io
+    $ git init
+    $ git checkout -b hexo-source
+    $ git add .
+    $ git commit -m "init hexo source"
+    $ git remote add origin git@github.com:ryanxci/ryanxci.github.io.git
+    $ git submodule add git@github.com/theme-next/hexo-theme-next themes/next
+    $ git push origin hexo-source
 
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+### 在另一台机器上
+    $ git clone git@github.com:ryanxci/ryanxci.github.io.git
+    $ cd ryanxci.github.io
+    $ git checkout hexo-source
+    $ git submodule init
+    $ git submodule update
+    $ npm install
+    $ hexo generate && hexo server
