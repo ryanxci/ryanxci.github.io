@@ -320,7 +320,7 @@
                 
               
 
-              <time title="Post created: 2018-05-11 14:11:30 / Updated at: 17:33:36" itemprop="dateCreated datePublished" datetime="2018-05-11T14:11:30+08:00">2018-05-11</time>
+              <time title="Post created: 2018-05-11 14:11:30 / Updated at: 17:40:44" itemprop="dateCreated datePublished" datetime="2018-05-11T14:11:30+08:00">2018-05-11</time>
             
 
             
@@ -360,9 +360,22 @@
       
         
           
-            <h3 id="在博客仓库中新建一个新分支hexo-source-用来存放hexo数据，theme通过submodule管理"><a href="#在博客仓库中新建一个新分支hexo-source-用来存放hexo数据，theme通过submodule管理" class="headerlink" title="在博客仓库中新建一个新分支hexo-source 用来存放hexo数据，theme通过submodule管理"></a>在博客仓库中新建一个新分支hexo-source 用来存放hexo数据，theme通过submodule管理</h3><p>$ cd ryanxci.github.io<br>$ git init<br>$ git checkout -b hexo-source<br>$ git add .<br>$ git commit -m “init hexo source”<br>$ git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:ryanxci/ryanxci.github.io.git<br>$ git submodule add <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>/theme-next/hexo-theme-next themes/next<br>$ git push origin hexo-source</p>
-<p>$ git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:ryanxci/ryanxci.github.io.git<br>$ cd ryanxci.github.io<br>$ git checkout hexo-source<br>$ git submodule init<br>$ git submodule update<br>$ npm install<br>$ hexo generate &amp;&amp; hexo server</p>
-
+            <h3 id="在博客仓库中新建一个新分支hexo-source-用来存放hexo数据，theme通过submodule管理"><a href="#在博客仓库中新建一个新分支hexo-source-用来存放hexo数据，theme通过submodule管理" class="headerlink" title="在博客仓库中新建一个新分支hexo-source 用来存放hexo数据，theme通过submodule管理"></a>在博客仓库中新建一个新分支hexo-source 用来存放hexo数据，theme通过submodule管理</h3><pre><code>$ cd ryanxci.github.io
+$ git init
+$ git checkout -b hexo-source
+$ git add .
+$ git commit -m &quot;init hexo source&quot;
+$ git remote add origin git@github.com:ryanxci/ryanxci.github.io.git
+$ git submodule add git@github.com/theme-next/hexo-theme-next themes/next
+$ git push origin hexo-source
+</code></pre><h3 id="在另一台机器上"><a href="#在另一台机器上" class="headerlink" title="在另一台机器上"></a>在另一台机器上</h3><pre><code>$ git clone git@github.com:ryanxci/ryanxci.github.io.git
+$ cd ryanxci.github.io
+$ git checkout hexo-source
+$ git submodule init
+$ git submodule update
+$ npm install
+$ hexo generate &amp;&amp; hexo server
+</code></pre>
           
         
       
